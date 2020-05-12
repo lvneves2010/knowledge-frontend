@@ -20,7 +20,7 @@
                   </b-form-group>
               </b-col>
           </b-row>
-          <b-form-checkbox id="user-admin" v-model="user.admin" class="mt-3 mb-3">administrador</b-form-checkbox>
+          <b-form-checkbox id="user-admin" v-show="mode === 'save'" v-model="user.admin" class="mt-3 mb-3">administrador</b-form-checkbox>
           <b-row v-show="mode === 'save'" >
               <b-col md="6" sm="12" >
                   <b-form-group label="Senha:" label-for="user-password" >
@@ -60,8 +60,8 @@
 </template>
 
 <script>
-import axios from 'axios'
 import { baseApiUrl, showError } from '../../global'
+import axios from 'axios'
 
 export default {
     name: 'UserAdmin',
@@ -74,7 +74,7 @@ export default {
                 { key: 'id', label: 'Código', sortable: true },
                 { key: 'name', label: 'Nome', sortable: true },
                 { key: 'email', label: 'E-mail', sortable: true },
-                { key: 'admin', label: 'Administrador', sortable: true, formatter: value => value? 'sim' : 'não' },
+                { key: 'admin', label: 'Administrador', sortable: true, formatter: value => value ? 'sim' : 'não' },
                 { key: 'actions', label: 'Ações' }
             ]
         }

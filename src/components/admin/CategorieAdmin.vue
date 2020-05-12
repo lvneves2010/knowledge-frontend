@@ -13,7 +13,7 @@
             id="category-parentId"
             :options="categories"
             v-model="category.parentId"></b-form-select>
-            <b-form-input v-else id="category-parentID" type="text"
+            <b-form-input v-else id="category-parentId" type="text"
             v-model="category.path"
             readonly></b-form-input>
         </b-form-group>
@@ -36,8 +36,8 @@
 </template>
 
 <script>
+import { baseApiUrl, showError } from '@/global'
 import axios from 'axios'
-import { baseApiUrl, showError } from '../../global'
 
 export default {
     name: 'CategoryAdmin',

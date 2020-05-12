@@ -1,7 +1,7 @@
 <template>
   <aside class="menu" v-show="isMenuVisible" >
       <div class="menu-filter">
-          <i class="fa fa-search falg"></i>
+          <i class="fa fa-search fa-lg"></i>
           <input type="text" class="filter-field" v-model="treeFilter"
             placeholder="Digite para filtrar...">
       </div>
@@ -39,6 +39,10 @@ export default {
                 name: 'articlesByCategory',
                 params: { id: node.id }
             })
+
+            if( this.$mq === 'xs' || this.$mq === 'sm' ) {
+                this.$store.commit( 'toggleMenu', false )
+            }
         }
     },
     mounted() {

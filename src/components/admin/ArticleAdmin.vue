@@ -20,9 +20,9 @@
             :readonly="mode === 'remove'"
             placeholder="Informe a URL da Imagem"></b-form-input>
         </b-form-group>
-        <b-form-group v-if="mode === 'save'" label="Categoria:" label-for="article-parentId" >
+        <b-form-group v-if="mode === 'save'" label="Categoria:" label-for="article-categoryId" >
             <b-form-select
-            id="article-parentId"
+            id="article-categoryId"
             :options="categories"
             v-model="article.categoryId"></b-form-select>
         </b-form-group>
@@ -57,8 +57,8 @@
 
 <script>
 import { VueEditor } from "vue2-editor";
-import axios from 'axios'
 import { baseApiUrl, showError } from '@/global'
+import axios from 'axios'
 
 export default {
     name: 'ArticleAdmin',

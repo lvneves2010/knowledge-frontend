@@ -10,7 +10,7 @@
         </li>
     </ul>
     <div class="load-more">
-        <button class="btn btn-lg btn-outline-prymary"
+        <button class="btn btn-lg btn-outline-primary"
             v-if="loadMore"
             @click="getArticles">Carregar Mais Artigos</button>
     </div>

@@ -1,7 +1,8 @@
 import Vue from 'vue'
 
 export const userKey = '__chave_da_aplicacao'
-export const baseApiUrl = 'http://localhost:3000'
+// export const baseApiUrl = 'http://localhost:3000'
+export const baseApiUrl = 'https://leon-knowledge-base-blog-api.mybluemix.net'
 
 export function showError(e) {
     // console.log('error>>', e)

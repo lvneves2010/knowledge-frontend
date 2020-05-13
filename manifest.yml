@@ -1,0 +1,6 @@
+---
+applications:
+  - name: leon-neves-myblog
+    memory: 96M
+    buildpack: https://github.com/cloudfoundry/staticfile-buildpack.git
+    
